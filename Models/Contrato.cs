@@ -16,7 +16,7 @@ namespace AppEscolaDeMusica.Models
         [Column("data_fim")]
         public required DateOnly DataFim { get; set; }
 
-        [Column("Data_vencimento")]
+        [Column("data_vencimento")]
         public required DateOnly DataVencimento { get; set; }
 
         [Column("valor_mensal")]
