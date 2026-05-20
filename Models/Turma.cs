@@ -44,6 +44,8 @@ namespace AppEscolaDeMusica.Models
         public int SalaId { get; set; }
         public virtual Sala Sala { get; set; }
 
-        public ICollection<Ministra>? Ministra { get; set; }
+        public ICollection<Ministra> Ministras { get; set; } = new List<Ministra>();
+        
+        public ICollection<Agenda> Agendas { get; set; } = new List<Agenda>();
     }
 }

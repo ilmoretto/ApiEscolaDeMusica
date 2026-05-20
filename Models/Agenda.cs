@@ -1,9 +1,10 @@
 ﻿using AppEscolaDeMusica.Enums;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AppEscolaDeMusica.Models
 {
-    [Table("agenda")]
+    [Table("agenda"), PrimaryKey(nameof(AlunoId), nameof(TurmaId))]
     public class Agenda
     {
         [Column("fk_aluno_id")]
@@ -25,11 +26,9 @@ namespace AppEscolaDeMusica.Models
         public DateTime? DataCancelamento { get; set; }
 
         [ForeignKey("AlunoId")]
-        public Aluno Aluno { get; set; }
+        public virtual Aluno Aluno { get; set; }
 
         [ForeignKey("TurmaId")]
-        public Turma Turma { get; set; }
-
-
+        public virtual Turma Turma { get; set; }
     }
 }

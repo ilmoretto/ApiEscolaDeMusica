@@ -39,5 +39,7 @@ namespace AppEscolaDeMusica.Models
         public ResponsavelAluno Responsavel { get; set; }
 
         public ICollection<Contrato> Contratos { get; set; } = new List<Contrato>();
+        
+        public ICollection<Agenda> Agendas { get; set; } = new List<Agenda>();
     }
 }

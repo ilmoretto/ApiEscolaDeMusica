@@ -1,9 +1,10 @@
 ﻿using AppEscolaDeMusica.Enums;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AppEscolaDeMusica.Models
 {
-    [Table("professor")]
+    [Table("professor"), PrimaryKey(nameof(Id))]
     public class Professor
     {
         [Column("id")]
@@ -15,30 +16,32 @@ namespace AppEscolaDeMusica.Models
         [Column("cpf")]
         public required string Cpf { get; set; }
 
-        [Column("rg")]  
+        [Column("rg")]
         public required string Rg { get; set; }
 
         [Column("email")]
         public string Email { get; set; }
 
         [Column("telefone")]
-        public string Telefone { get; set; }
+        public required string Telefone { get; set; }
 
         [Column("data_admissao")]
-        public DateTime? DataAdmissao { get; set; }
+        public required DateOnly DataAdmissao { get; set; }
 
         [Column("data_demissao")]
-        public DateTime? DataDemissao { get; set; }
+        public DateOnly? DataDemissao { get; set; }
 
         [Column("status_prof")]
         public StatusProfessorEnum StatusProf { get; set; }
 
         [Column("especialidade")]
-        public string Especialidade { get; set; }
+        public required string Especialidade { get; set; }
 
         [Column("valor_hora_aula")]
-        public decimal ValorHoraAula { get; set; }
+        public required decimal ValorHoraAula { get; set; }
 
-        public ICollection<Sala> Salas { get; set; } = new List<Sala>();
+        public ICollection<Ministra> Ministras { get; set; } = new List<Ministra>();
+        
+        public ICollection<DisponibilidadeProfessor> Disponibilidades { get; set; } = new List<DisponibilidadeProfessor>();
     }
 }

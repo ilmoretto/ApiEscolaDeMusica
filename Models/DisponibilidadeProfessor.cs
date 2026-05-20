@@ -1,9 +1,10 @@
 ﻿using AppEscolaDeMusica.Enums;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AppEscolaDeMusica.Models
 {
-    [Table("disponibilidade_professor")]
+    [Table("disponibilidade_professor"), PrimaryKey(nameof(Id))]
     public class DisponibilidadeProfessor
     {
         [Column("id")]
@@ -15,17 +16,16 @@ namespace AppEscolaDeMusica.Models
         [Column("dia_semana")]
         public DiaSemanaEnum DiaSemana { get; set; }
 
+        [Column("horario_inicio")]
+        public TimeOnly HorarioInicio { get; set; }
+
+        [Column("horario_fim")]
+        public TimeOnly HorarioFim { get; set; }
+
         [Column("status_disp")]
         public StatusDisponibilidadeEnum StatusDisp { get; set; }
 
-        [Column("horario_inicio")]
-        public string Status { get; set; }
-
-        [Column("horario_fim")]
-        public string HorarioFim { get; set; }
-
         [ForeignKey("ProfessorId")]
-        public Professor Professor { get; set; }
-
+        public virtual Professor Professor { get; set; }
     }
 }
