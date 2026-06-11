@@ -1,4 +1,4 @@
-﻿namespace AppEscolaDeMusica.Enums
+namespace AppEscolaDeMusica.Enums
 {
     public enum StatusAlunoEnum
     {

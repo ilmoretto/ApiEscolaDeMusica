@@ -1,17 +1,20 @@
 using AppEscolaDeMusica.Enums;
+using System.ComponentModel.DataAnnotations;
 
-namespace AppEscolaDeMusica.DTOs.Alunos
+namespace AppEscolaDeMusica.Dtos.Alunos
 {
     public class AlunoUpdateDto
     {
-        public string Cpf { get; set; }
-        public string Rg { get; set; }
-        public required string Nome { get; set; }
-        public string Email { get; set; }
-        public string Telefone { get; set; }
-        public DateTime DataNascimento { get; set; }
-        public int ResponsavelId { get; set; }
-        public DateTime DataMatricula { get; set; }
-        public StatusAlunoEnum StatusAluno { get; set; }
+        [MaxLength(150)]
+        public string? Nome { get; set; }
+
+        [EmailAddress]
+        [MaxLength(100)]
+        public string? Email { get; set; }
+
+        [MaxLength(20)]
+        public string? Telefone { get; set; }
+
+        public StatusAlunoEnum? StatusAluno { get; set; }
     }
 }

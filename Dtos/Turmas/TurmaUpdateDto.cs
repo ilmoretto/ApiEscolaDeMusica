@@ -1,6 +1,6 @@
 using AppEscolaDeMusica.Enums;
 
-namespace AppEscolaDeMusica.DTOs.Turmas
+namespace AppEscolaDeMusica.Dtos.Turmas
 {
     public class TurmaUpdateDto
     {

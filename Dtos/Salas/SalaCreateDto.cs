@@ -1,4 +1,4 @@
-namespace AppEscolaDeMusica.DTOs.Salas
+namespace AppEscolaDeMusica.Dtos.Salas
 {
     public class SalaCreateDto
     {

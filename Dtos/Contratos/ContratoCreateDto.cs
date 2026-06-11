@@ -1,6 +1,6 @@
 using AppEscolaDeMusica.Enums;
 
-namespace AppEscolaDeMusica.DTOs.Contratos
+namespace AppEscolaDeMusica.Dtos.Contratos
 {
     public class ContratoCreateDto
     {
