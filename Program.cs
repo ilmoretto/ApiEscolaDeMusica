@@ -102,11 +102,13 @@ builder.Services.AddSwaggerGen(options =>
 // Registrar Services
 builder.Services.AddScoped<ResponsavelAlunoService>();
 builder.Services.AddScoped<AlunoService>();
+builder.Services.AddScoped<ProfessorService>();
 
 // Registrar AutoMapper Profiles
 builder.Services.AddAutoMapper(config => {
    config.AddProfile<ResponsavelAlunoProfile>();
    config.AddProfile<AlunoProfile>();
+   config.AddProfile<ProfessorProfile>();
 });
 
 var app = builder.Build();
