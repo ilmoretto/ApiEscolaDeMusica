@@ -1,6 +1,6 @@
 using AppEscolaDeMusica.Enums;
 
-namespace AppEscolaDeMusica.DTOs.ResponsaveisAlunos
+namespace AppEscolaDeMusica.Dtos.ResponsaveisAlunos
 {
     public class ResponsavelAlunoResponseDto
     {

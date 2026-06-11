@@ -1,6 +1,6 @@
 using AppEscolaDeMusica.Enums;
 
-namespace AppEscolaDeMusica.DTOs.Cursos
+namespace AppEscolaDeMusica.Dtos.Cursos
 {
     public class CursoUpdateDto
     {

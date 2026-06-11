@@ -1,6 +1,6 @@
 using AppEscolaDeMusica.Enums;
 
-namespace AppEscolaDeMusica.DTOs.DisponibilidadesProfessores
+namespace AppEscolaDeMusica.Dtos.DisponibilidadesProfessores
 {
     public class DisponibilidadeProfessorResponseDto
     {

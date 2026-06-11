@@ -1,4 +1,4 @@
-﻿using AppEscolaDeMusica.Enums;
+using AppEscolaDeMusica.Enums;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
 

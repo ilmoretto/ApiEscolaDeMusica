@@ -1,6 +1,6 @@
 using AppEscolaDeMusica.Enums;
 
-namespace AppEscolaDeMusica.DTOs.Alunos
+namespace AppEscolaDeMusica.Dtos.Alunos
 {
     public class AlunoResponseDto
     {
@@ -8,5 +8,6 @@ namespace AppEscolaDeMusica.DTOs.Alunos
         public required string Nome { get; set; }
         public string Email { get; set; }
         public StatusAlunoEnum StatusAluno { get; set; }
+        public int ResponsavelId { get; set; }
     }
 }

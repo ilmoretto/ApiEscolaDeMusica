@@ -1,4 +1,4 @@
-namespace AppEscolaDeMusica.DTOs.Ministras
+namespace AppEscolaDeMusica.Dtos.Ministras
 {
     public class MinistraResponseDto
     {

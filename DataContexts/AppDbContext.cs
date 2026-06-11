@@ -1,4 +1,4 @@
-﻿using AppEscolaDeMusica.Models;
+using AppEscolaDeMusica.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace AppEscolaDeMusica.DataContexts
@@ -21,6 +21,17 @@ namespace AppEscolaDeMusica.DataContexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Aluno>().ToTable("aluno");
+            modelBuilder.Entity<Professor>().ToTable("professor");
+            modelBuilder.Entity<Curso>().ToTable("curso");
+            modelBuilder.Entity<Sala>().ToTable("sala");
+            modelBuilder.Entity<Turma>().ToTable("turma");
+            modelBuilder.Entity<ResponsavelAluno>().ToTable("responsavel_aluno");
+            modelBuilder.Entity<DisponibilidadeProfessor>().ToTable("disponibilidade_professor");
+            modelBuilder.Entity<Ministra>().ToTable("ministra");
+            modelBuilder.Entity<Agenda>().ToTable("agenda");
+            modelBuilder.Entity<Contrato>().ToTable("contrato");
 
             modelBuilder.Entity<Aluno>(e =>
                 e.Property(x => x.StatusAluno).HasConversion<string>().HasMaxLength(30));
