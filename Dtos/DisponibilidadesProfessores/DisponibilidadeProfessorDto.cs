@@ -2,7 +2,7 @@ using AppEscolaDeMusica.Enums;
 
 namespace AppEscolaDeMusica.Dtos.DisponibilidadesProfessores
 {
-    public class DisponibilidadeProfessorCreateDto
+    public class DisponibilidadeProfessorDto
     {
         public int ProfessorId { get; set; }
         public DiaSemanaEnum DiaSemana { get; set; }

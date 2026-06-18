@@ -2,7 +2,7 @@ using AppEscolaDeMusica.Enums;
 
 namespace AppEscolaDeMusica.Dtos.Contratos
 {
-    public class ContratoCreateDto
+    public class ContratoDto
     {
         public required DateOnly DataInicio { get; set; }
         public required DateOnly DataFim { get; set; }

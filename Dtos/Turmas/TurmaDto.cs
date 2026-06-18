@@ -2,7 +2,7 @@ using AppEscolaDeMusica.Enums;
 
 namespace AppEscolaDeMusica.Dtos.Turmas
 {
-    public class TurmaCreateDto
+    public class TurmaDto
     {
         public required string Nome { get; set; }
         public StatusTurmaEnum StatusTurma { get; set; }

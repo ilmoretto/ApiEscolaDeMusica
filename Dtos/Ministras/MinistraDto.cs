@@ -1,6 +1,6 @@
 namespace AppEscolaDeMusica.Dtos.Ministras
 {
-    public class MinistraCreateDto
+    public class MinistraDto
     {
         public int TurmaId { get; set; }
         public int ProfessorId { get; set; }

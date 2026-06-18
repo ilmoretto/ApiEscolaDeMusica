@@ -1,5 +1,5 @@
-using AppEscolaDeMusica.Enums;
 using System.ComponentModel.DataAnnotations.Schema;
+using AppEscolaDeMusica.Enums;
 
 namespace AppEscolaDeMusica.Models
 {

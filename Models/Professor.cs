@@ -1,6 +1,6 @@
+using System.ComponentModel.DataAnnotations.Schema;
 using AppEscolaDeMusica.Enums;
 using Microsoft.EntityFrameworkCore;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AppEscolaDeMusica.Models
 {

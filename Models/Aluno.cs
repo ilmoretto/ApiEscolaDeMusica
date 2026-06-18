@@ -11,7 +11,6 @@ namespace AppEscolaDeMusica.Models
         public string Email { get; set; }
         public string Telefone { get; set; }
         public DateTime DataNascimento { get; set; }
-        [Column("fk_id_responsavel")]
         public int ResponsavelId { get; set; }
         public DateTime DataMatricula { get; set; }
         public StatusAlunoEnum StatusAluno { get; set; }

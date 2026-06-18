@@ -2,7 +2,7 @@ using AppEscolaDeMusica.Enums;
 
 namespace AppEscolaDeMusica.Dtos.Cursos
 {
-    public class CursoCreateDto
+    public class CursoDto
     {
         public NivelCursoEnum Nivel { get; set; }
         public required string Nome { get; set; }

@@ -2,7 +2,7 @@ using AppEscolaDeMusica.Enums;
 
 namespace AppEscolaDeMusica.Dtos.Agendas
 {
-    public class AgendaCreateDto
+    public class AgendaDto
     {
         public int AlunoId { get; set; }
         public int TurmaId { get; set; }

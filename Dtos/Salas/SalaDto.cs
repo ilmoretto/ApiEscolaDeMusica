@@ -1,6 +1,6 @@
 namespace AppEscolaDeMusica.Dtos.Salas
 {
-    public class SalaCreateDto
+    public class SalaDto
     {
         public required string Nome { get; set; }
         public required string Localizacao { get; set; }
