@@ -25,6 +25,8 @@ builder.Services.AddControllers().AddJsonOptions(
         options.JsonSerializerOptions.WriteIndented = true;
     });
 
+
+
 /**
  * Configuração de Versionamento de API
  */
@@ -103,12 +105,14 @@ builder.Services.AddSwaggerGen(options =>
 builder.Services.AddScoped<ResponsavelAlunoService>();
 builder.Services.AddScoped<AlunoService>();
 builder.Services.AddScoped<ProfessorService>();
+builder.Services.AddScoped<CursoService>();
 
 // Registrar AutoMapper Profiles
 builder.Services.AddAutoMapper(config => {
    config.AddProfile<ResponsavelAlunoProfile>();
    config.AddProfile<AlunoProfile>();
    config.AddProfile<ProfessorProfile>();
+   config.AddProfile<CursoProfile>();
 });
 
 var app = builder.Build();
