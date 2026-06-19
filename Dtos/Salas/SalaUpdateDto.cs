@@ -1,10 +1,14 @@
+using System.ComponentModel.DataAnnotations;
 namespace AppEscolaDeMusica.Dtos.Salas
 {
     public class SalaUpdateDto
     {
-        public required string Nome { get; set; }
-        public required string Localizacao { get; set; }
-        public required string Equipamentos { get; set; }
-        public required int Capacidade { get; set; }
+        [MaxLength(100)]
+        public string? Nome { get; set; }
+        [MaxLength(100)]
+        public string? Localizacao { get; set; }
+        [MaxLength(500)]
+        public string? Equipamentos { get; set; }
+        public int? Capacidade { get; set; }
     }
 }
