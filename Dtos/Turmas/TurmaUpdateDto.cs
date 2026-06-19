@@ -12,7 +12,7 @@ namespace AppEscolaDeMusica.Dtos.Turmas
         public required int Capacidade { get; set; }
         public required int QuantidadeAulas { get; set; }
         public required DateOnly DataInicio { get; set; }
-        public required DateOnly DataFim { get; set; }
+        public DateOnly DataFim { get; set; }
         public int CursoId { get; set; }
         public int SalaId { get; set; }
     }

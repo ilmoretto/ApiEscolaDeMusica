@@ -106,6 +106,7 @@ builder.Services.AddScoped<ResponsavelAlunoService>();
 builder.Services.AddScoped<AlunoService>();
 builder.Services.AddScoped<ProfessorService>();
 builder.Services.AddScoped<CursoService>();
+builder.Services.AddScoped<SalaService>();
 
 // Registrar AutoMapper Profiles
 builder.Services.AddAutoMapper(config => {
@@ -113,6 +114,7 @@ builder.Services.AddAutoMapper(config => {
    config.AddProfile<AlunoProfile>();
    config.AddProfile<ProfessorProfile>();
    config.AddProfile<CursoProfile>();
+   config.AddProfile<SalaProfile>();
 });
 
 var app = builder.Build();
