@@ -3,10 +3,10 @@ using AppEscolaDeMusica.Helpers.Paginated;
 
 namespace AppEscolaDeMusica.Controllers.Filters
 {
-    public class ContratoFilter : PaginatedFilter
+    public class AgendaFilter : PaginatedFilter
     {
         public int? AlunoId { get; set; }
-        public int? CursoId { get; set; }
-        public StatusContratoEnum? StatusContrato { get; set; }
+        public int? TurmaId { get; set; }
+        public StatusAgendaEnum? StatusAgenda { get; set; }
     }
 }
