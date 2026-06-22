@@ -1,4 +1,5 @@
-﻿using AppEscolaDeMusica.Controllers.Filters;
+using Microsoft.AspNetCore.Authorization;
+using AppEscolaDeMusica.Controllers.Filters;
 using AppEscolaDeMusica.Dtos.Salas;
 using AppEscolaDeMusica.Services;
 using Asp.Versioning;
@@ -8,6 +9,7 @@ namespace AppEscolaDeMusica.Controllers
     [ApiController]
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/salas")]
+    [Authorize]
     public class SalaController : ControllerBase
     {
         private readonly SalaService _service;
@@ -39,6 +41,7 @@ namespace AppEscolaDeMusica.Controllers
             return result == null ? NotFound() : Ok(result);
         }
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Administrador")]
         public async Task<IActionResult> Delete(int id)
         {
             var success = await _service.Delete(id);

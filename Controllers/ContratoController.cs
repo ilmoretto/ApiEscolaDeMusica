@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using AppEscolaDeMusica.Controllers.Filters;
 using AppEscolaDeMusica.Dtos.Contratos;
 using AppEscolaDeMusica.Services;
@@ -9,6 +10,7 @@ namespace AppEscolaDeMusica.Controllers
     [ApiController]
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/contratos")]
+    [Authorize]
     public class ContratoController : ControllerBase
     {
         private readonly ContratoService _service;
@@ -46,6 +48,7 @@ namespace AppEscolaDeMusica.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Administrador")]
         public async Task<IActionResult> Delete(int id)
         {
             var success = await _service.Delete(id);
@@ -53,3 +56,4 @@ namespace AppEscolaDeMusica.Controllers
         }
     }
 }
+

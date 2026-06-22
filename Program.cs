@@ -78,11 +78,11 @@ builder.Services.AddSwaggerGen(options =>
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
     {
         Name = "Authorization",
-        Type = SecuritySchemeType.ApiKey,
+        Type = SecuritySchemeType.Http,
         Scheme = "Bearer",
         BearerFormat = "JWT",
         In = ParameterLocation.Header,
-        Description = "Cabeçalho de autorização JWT. Usando esquema de Bearer \r\n\r\n Digite 'Bearer + token'. Ex.: 'Bearer 123...'"
+        Description = "Insira apenas o token JWT abaixo."
     });
 
     options.AddSecurityRequirement(new OpenApiSecurityRequirement

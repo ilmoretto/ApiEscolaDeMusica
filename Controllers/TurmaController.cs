@@ -1,4 +1,5 @@
-﻿using AppEscolaDeMusica.Controllers.Filters;
+using Microsoft.AspNetCore.Authorization;
+using AppEscolaDeMusica.Controllers.Filters;
 using AppEscolaDeMusica.Dtos.Turmas;
 using AppEscolaDeMusica.Services;
 using Asp.Versioning;
@@ -9,6 +10,7 @@ namespace AppEscolaDeMusica.Controllers
     [ApiController]
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/turmas")]
+    [Authorize]
     public class TurmaController : ControllerBase
     {
         private readonly TurmaService _service;
@@ -46,6 +48,7 @@ namespace AppEscolaDeMusica.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Administrador")]
         public async Task<IActionResult> Delete(int id)
         {
             var success = await _service.Delete(id);

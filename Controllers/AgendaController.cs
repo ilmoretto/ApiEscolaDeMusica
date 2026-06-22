@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using AppEscolaDeMusica.Controllers.Filters;
 using AppEscolaDeMusica.Dtos.Agendas;
 using AppEscolaDeMusica.Services;
@@ -9,6 +10,7 @@ namespace AppEscolaDeMusica.Controllers
     [ApiController]
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/agendas")]
+    [Authorize]
     public class AgendaController : ControllerBase
     {
         private readonly AgendaService _service;
@@ -46,6 +48,7 @@ namespace AppEscolaDeMusica.Controllers
         }
 
         [HttpDelete("{alunoId}/{turmaId}")]
+        [Authorize(Roles = "Administrador")]
         public async Task<IActionResult> Delete(int alunoId, int turmaId)
         {
             var success = await _service.Delete(alunoId, turmaId);
@@ -53,3 +56,4 @@ namespace AppEscolaDeMusica.Controllers
         }
     }
 }
+

@@ -17,6 +17,7 @@ namespace AppEscolaDeMusica.DataContexts
         public DbSet<Ministra> Ministra { get; set; }
         public DbSet<Agenda> Agendas { get; set; }
         public DbSet<Contrato> Contratos { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -62,6 +63,10 @@ namespace AppEscolaDeMusica.DataContexts
 
             modelBuilder.Entity<Contrato>(e =>
                 e.Property(x => x.StatusContrato).HasConversion<string>().HasMaxLength(30));
+
+            modelBuilder.Entity<Usuario>().ToTable("usuario");
+            modelBuilder.Entity<Usuario>(e =>
+                e.Property(x => x.Role).HasConversion<string>().HasMaxLength(30));
         }
     }
 }

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using AppEscolaDeMusica.Controllers.Filters;
 using AppEscolaDeMusica.Dtos.ResponsaveisAlunos;
 using AppEscolaDeMusica.Services;
@@ -9,6 +10,7 @@ namespace AppEscolaDeMusica.Controllers
     [ApiController]
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/responsaveis-alunos")]
+    [Authorize]
     public class ResponsavelAlunoController : ControllerBase
     {
         private readonly ResponsavelAlunoService _service;
@@ -51,6 +53,7 @@ namespace AppEscolaDeMusica.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Administrador")]
         public async Task<IActionResult> Delete(int id)
         {
             var success = await _service.Delete(id);
@@ -60,3 +63,4 @@ namespace AppEscolaDeMusica.Controllers
         }
     }
 }
+
