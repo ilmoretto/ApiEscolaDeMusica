@@ -1,6 +1,6 @@
 # Sistema de Gestão para Escola de Música
 
-> **Projeto Web desenvolvido para a disciplina de Programação Web 2**  
+> **Projeto de API desenvolvido para a disciplina Programação com Acesso a Banco de Dados**  
 > **Curso:** Tecnologia em Análise e Desenvolvimento de Sistemas (ADS)  
 > **Instituição:** Instituto Federal de Rondônia (IFRO) - Campus Ji-Paraná  
 
