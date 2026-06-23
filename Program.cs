@@ -109,6 +109,7 @@ builder.Services.AddScoped<CursoService>();
 builder.Services.AddScoped<SalaService>();
 builder.Services.AddScoped<TurmaService>();
 builder.Services.AddScoped<DisponibilidadeProfessorService>();
+builder.Services.AddScoped<ContratoService>();
 
 // Registrar AutoMapper Profiles
 builder.Services.AddAutoMapper(config => {
@@ -119,6 +120,7 @@ builder.Services.AddAutoMapper(config => {
    config.AddProfile<SalaProfile>();
    config.AddProfile<TurmaProfile>();
    config.AddProfile<DisponibilidadeProfessorProfile>();
+   config.AddProfile<ContratoProfile>();
 });
 
 var app = builder.Build();
